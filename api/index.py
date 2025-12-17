@@ -1,10 +1,8 @@
 from fastapi import FastAPI
-from mangum import Mangum
 
 app = FastAPI()
 
 @app.get("/")
-def home():
-    return {"status": "RAGnetic is live 🚀"}
+def read_root():
+    return {"message": "Hello from RAGnetic!"}
 
-handler = Mangum(app)
